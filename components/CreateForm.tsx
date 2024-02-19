@@ -93,17 +93,14 @@ const CreateForm = ({
   });
 
   const [suppliers, setSuppliers] = useState<SuppliersType>({
+    ganaha: 0,
+    BEEFshin: 0,
+    sumi: 0,
     suehiro: 0,
     sakihama: 0,
     miyazato: 0,
-    ganaha: 0,
-    BEEFshin: 0,
-    zenoki: 0,
     sunny: 0,
     shopping: 0,
-    zappi: 0,
-    kemutou: 0,
-    gyoumu: 0,
     furikomiFee: 0,
     cardFee: 0,
     eigyou: 0,
@@ -111,7 +108,8 @@ const CreateForm = ({
     yachin: 0,
     kounetuhi: 0,
     tushinhi: 0,
-    miyagi: 0,
+    zappi: 0,
+    gyoumu: 0,
   });
 
   const [changes, setChanges] = useState<ChangesType>({

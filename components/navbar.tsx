@@ -82,11 +82,11 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                 aria-hidden="true"
               />
               {user && user.role === RoleType.ADMIN
-                ? "管理者"
+                ? "管理者（コザ店）"
                 : user && user.role === RoleType.USER
-                ? "一般ユーザー"
+                ? "一般ユーザー（コザ店）"
                 : user && user.role === RoleType.ZEIRISHI
-                ? "仮ユーザー"
+                ? "仮ユーザー（コザ店）"
                 : "未ログイン"}
             </p>
           </div>

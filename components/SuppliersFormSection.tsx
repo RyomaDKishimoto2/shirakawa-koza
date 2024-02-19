@@ -3,16 +3,15 @@ import { PlusIcon } from "@heroicons/react/24/outline";
 import { Sale, SaleData } from "../features/sales/Entities";
 
 const SUPPLIERS = {
-  suehiro: "末広商店",
+  suehiro: "末広物流",
   sakihama: "崎浜商店",
   miyazato: "宮里洋酒店",
   ganaha: "ガナハミート",
   BEEFshin: "BEEFshin",
-  zenoki: "ゼンオキ食品",
+  sumi: "炭のまるしん商会",
   sunny: "サニークリン",
   shopping: "買い物",
   zappi: "雑費",
-  kemutou: "けむとうなか",
   gyoumu: "業務委託費",
   furikomiFee: "振込手数料",
   cardFee: "カード手数料",
@@ -21,7 +20,6 @@ const SUPPLIERS = {
   yachin: "家賃",
   kounetuhi: "水道光熱費",
   tushinhi: "通信費",
-  miyagi: "宮城熊さん",
 } as const;
 type SupplierNameKey = keyof typeof SUPPLIERS; // keyだけの型
 

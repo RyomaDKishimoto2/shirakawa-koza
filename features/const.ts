@@ -75,11 +75,10 @@ export type SupplierType = {
   miyazato: number;
   ganaha: number;
   BEEFshin: number;
-  zenoki: number;
   sunny: number;
+  sumi: number;
   shopping: number;
   zappi: number;
-  kemutou: number;
   gyoumu: number;
   furikomiFee: number;
   cardFee: number;
@@ -88,7 +87,6 @@ export type SupplierType = {
   yachin: number;
   kounetuhi: number;
   tushinhi: number;
-  miyagi: number;
 };
 
 export type SalesType = {
