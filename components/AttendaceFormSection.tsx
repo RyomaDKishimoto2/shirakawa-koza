@@ -124,11 +124,11 @@ const MemberList: FC<{
         <Select
           options={[
             ...HOURS.filter((hour) => {
-              return hour >= 9;
+              return hour >= member.fromHour;
             }),
           ]}
-          htmlFor={"toHours"}
-          name={"toHours"}
+          htmlFor="toHours"
+          name="toHours"
           value={member.toHour}
           onChange={(e) => onChangeToHour(Number(e.target.value) as HourType)}
           disabled={member.status === "休み"}
@@ -136,8 +136,8 @@ const MemberList: FC<{
         <span className="mx-1 text-xl">:</span>
         <Select
           options={[...MINUTES]}
-          htmlFor={"toMin"}
-          name={"toMin"}
+          htmlFor="toMin"
+          name="toMin"
           value={member.toMin}
           onChange={(e) => onChangeToMin(Number(e.target.value) as MinuteType)}
           disabled={member.status === "休み"}

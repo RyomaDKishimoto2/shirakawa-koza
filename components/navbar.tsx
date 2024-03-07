@@ -123,7 +123,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="flex flex-col items-center justify-center text-gray-950"
+                  className="flex flex-col items-center justify-center text-gray-950 w-full"
                 >
                   {item.icon}
                   <div className="text-sm">{item.name}</div>
@@ -134,7 +134,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="flex flex-col items-center justify-center text-gray-950"
+                  className="flex flex-col items-center justify-center text-gray-950 w-full"
                 >
                   {item.icon}
                   <div className="text-sm">{item.name}</div>

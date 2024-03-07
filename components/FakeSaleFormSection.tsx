@@ -47,6 +47,17 @@ export const FakeSaleFormSection: FC<FakeSaleFormSectionProps> = ({
         disabled
       />
       <InputWithLabel
+        name="Uber"
+        value={todaySale.uber}
+        label="Uber"
+        labelSize='text-xl'
+        InputSize='text-xl'
+        onChange={() => {
+          //
+        }}
+        disabled
+      />
+      <InputWithLabel
         name={'guests'}
         value={todaySale.guests}
         label={'来客数'}

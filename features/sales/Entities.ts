@@ -24,6 +24,7 @@ export type SaleData = {
   cash: number;
   card: number;
   eMoney: number;
+  uber: number;
   guests: number;
   weather: WeatherType;
   total: number;
@@ -41,6 +42,7 @@ export class Sale {
     public cash: number,
     public card: number,
     public eMoney: number,
+    public uber: number,
     public guests: number,
     public weather: WeatherType,
     public total: number,

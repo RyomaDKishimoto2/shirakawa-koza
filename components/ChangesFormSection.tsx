@@ -135,7 +135,7 @@ export const ChangesFormSection: FC<ChangesFormSectionProps> = ({
         <div className="flex items-center justify-between mb-4">
           <span className="ms-3 inline-flex items-center rounded-md bg-gray-50 px-2 py-1 truncate text-sm leading-5 text-gray-500 ring-1 ring-inset ring-gray-700/10">
             差額:
-            {(changesTotal - 60000).toLocaleString("ja-JP", {
+            {(changesTotal - 50000).toLocaleString("ja-JP", {
               style: "currency",
               currency: "JPY",
             })}

@@ -12,6 +12,7 @@ const createFromResponse = (responses: SalesType[]) => {
       res.cash,
       res.card,
       res.eMoney,
+      res.uber,
       res.guests,
       res.weather,
       res.total,

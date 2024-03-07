@@ -84,6 +84,7 @@ const CreateForm = ({
     cash: 0,
     card: 0,
     eMoney: 0,
+    uber: 0,
     guests: 0,
     weather: "晴れ" as WeatherType,
     total: 0,

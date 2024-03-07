@@ -7,7 +7,7 @@ export const STATUS = { offWork: "休み", working: "出勤" } as const;
 export const HOURLY = [900, 950, 1000, 1100, 1200, 1300, 1400, 1500] as const;
 export const MINUTES = [0, 15, 30, 45] as const;
 export const HOURS = [
-  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
 ] as const;
 export const WEATHERS = [
   "晴れ",
@@ -96,6 +96,7 @@ export type SalesType = {
   cash: number;
   card: number;
   eMoney: number;
+  uber: number;
   guests: number;
   changes: ChangeStateType;
   members: MemberType[];

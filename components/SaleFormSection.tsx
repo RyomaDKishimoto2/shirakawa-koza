@@ -103,6 +103,16 @@ export const SaleFormSection = <T extends Sale | SaleData>(
             }}
           />
           <SaleList
+            value={todaySale.uber}
+            name="Uber"
+            onChange={(value) => {
+              setTodaySale((sale) => ({
+                ...sale,
+                uber: value,
+              }));
+            }}
+          />
+          <SaleList
             value={todaySale.guests}
             invalid={isGuestsEmpty(todaySale)}
             name="来客数"
