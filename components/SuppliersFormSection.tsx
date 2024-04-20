@@ -66,15 +66,27 @@ const SupplierList: FC<{
       <div className="max-w-xs mx-auto">
         <input
           type="text"
+          value={value}
+          onChange={(e) => {
+            const newValue = e.target.value;
+            // 数値のみ入力可能 (0~9のみ)
+            if (/^[0-9]*$/.test(newValue)) {
+              // 1桁目が0は入力不可能
+              if (newValue !== "0" || newValue.length === 1) {
+                onChange(Number(e.target.value));
+              }
+            } else {
+              // 数値以外の値が入力された場合にアラートを表示
+              alert("数値を入力してください。");
+            }
+          }}
+          pattern="[0-9]*"
+          inputMode="numeric"
           id="quantity-input"
           data-input-counter
           aria-describedby="helper-text-explanation"
           className="bg-gray-50 rounded border border-gray-300 h-11 text-right text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
           placeholder="0"
-          value={value}
-          onChange={(e) => {
-            onChange(Number(e.target.value));
-          }}
           required
         />
       </div>
@@ -118,17 +130,28 @@ const SupplierListOptional: FC<{
       </div>
       <div className="max-w-xs mx-auto">
         <input
-          type="number"
-          name="quantity"
-          id="quantity"
-          step="1"
-          min="0"
+          type="text"
+          value={value}
+          onChange={(e) => {
+            const newValue = e.target.value;
+            // 数値のみ入力可能 (0~9のみ)
+            if (/^[0-9]*$/.test(newValue)) {
+              // 1桁目が0は入力不可能
+              if (newValue !== "0" || newValue.length === 1) {
+                onChange(Number(e.target.value));
+              }
+            } else {
+              // 数値以外の値が入力された場合にアラートを表示
+              alert("数値を入力してください。");
+            }
+          }}
+          pattern="[0-9]*"
+          inputMode="numeric"
+          id="quantity-input"
           data-input-counter
           aria-describedby="helper-text-explanation"
           className="bg-gray-50 rounded border border-gray-300 h-11 text-right text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
           placeholder="0"
-          value={value}
-          onChange={(e) => onChange(Number(e.target.value))}
           required
         />
       </div>
