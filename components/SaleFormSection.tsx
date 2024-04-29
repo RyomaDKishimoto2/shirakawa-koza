@@ -23,6 +23,7 @@ const SaleList: FC<{
       <div className="w-full mx-auto">
         <input
           type="text"
+          inputMode="numeric"
           id="quantity-input"
           data-input-counter
           aria-describedby="helper-text-explanation"

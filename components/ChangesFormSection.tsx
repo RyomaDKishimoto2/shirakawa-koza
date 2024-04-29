@@ -56,7 +56,7 @@ const ChangeList: FC<{
   setDecrement: () => void;
 }> = ({ title, cost, setIncrement, setChanges, setDecrement, value }) => {
   return (
-    <li className="flex items-center justify-between gap-x-6 py-5">
+    <li className="flex items-center justify-between gap-x-4 py-5">
       <div className="min-w-[80px]">{title}</div>
       <div className="max-w-xs mx-auto">
         <div className="relative flex items-center max-w-[8rem]">
