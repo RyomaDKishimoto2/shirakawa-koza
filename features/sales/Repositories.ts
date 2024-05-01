@@ -88,6 +88,7 @@ const addNewMember = async (member: CreateMemberInput) => {
     name: member.name,
     createdAt: member.createdAt,
     salary: member.salary,
+    isDeleted: false,
   });
   await setDoc(staffInfoRef, member);
 };
