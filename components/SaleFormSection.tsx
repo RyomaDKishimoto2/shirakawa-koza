@@ -88,7 +88,7 @@ export const SaleFormSection = <T extends Sale | SaleData>(
               setTodaySale((sale) => ({
                 ...sale,
                 card: value,
-                total: sale.cash + sale.eMoney + value,
+                total: sale.cash + sale.eMoney + value + sale.uber, // totalの計算を修正
               }));
             }}
           />
@@ -107,12 +107,15 @@ export const SaleFormSection = <T extends Sale | SaleData>(
             value={todaySale.uber}
             name="Uber"
             onChange={(value) => {
-              setTodaySale((sale) => ({
-                ...sale,
-                uber: value,
-                card: sale.card + value,
-                total: sale.total + value,
-              }));
+              setTodaySale((sale) => {
+                const uberDiff = value - sale.uber; // 変更前後の差分を計算
+                return {
+                  ...sale,
+                  uber: value,
+                  card: sale.card + uberDiff, // 差分をcardに反映
+                  total: sale.total + uberDiff, // totalも同様に修正
+                };
+              });
             }}
           />
           <SaleList
