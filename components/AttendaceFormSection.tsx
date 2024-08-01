@@ -94,7 +94,7 @@ const MemberList: FC<{
           </p>
         </div>
         <div className="inline-flex items-center text-sm leading-6 text-gray-900">
-          {(member.amount + monthlyTotal).toLocaleString("ja-JP", {
+          {monthlyTotal.toLocaleString("ja-JP", {
             style: "currency",
             currency: "JPY",
           })}

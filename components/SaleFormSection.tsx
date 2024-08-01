@@ -110,6 +110,8 @@ export const SaleFormSection = <T extends Sale | SaleData>(
               setTodaySale((sale) => ({
                 ...sale,
                 uber: value,
+                card: value,
+                total: sale.cash + sale.eMoney + value,
               }));
             }}
           />
