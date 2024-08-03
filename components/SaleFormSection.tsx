@@ -56,13 +56,10 @@ export const SaleFormSection = <T extends Sale | SaleData>(
           売り上げ合計
         </span>
         <h5 className="text-xl font-bold leading-none text-gray-900">
-          {(todaySale.cash + todaySale.card + todaySale.eMoney).toLocaleString(
-            "ja-JP",
-            {
-              style: "currency",
-              currency: "JPY",
-            }
-          )}
+          {todaySale.total.toLocaleString("ja-JP", {
+            style: "currency",
+            currency: "JPY",
+          })}
         </h5>
       </div>
       <div className="flow-root">
