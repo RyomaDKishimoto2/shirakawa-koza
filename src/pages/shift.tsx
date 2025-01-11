@@ -40,6 +40,7 @@ const ShitPage: NextPage = () => {
     router.replace({
       query: {
         ...router.query,
+        year,
         month,
       },
     });
